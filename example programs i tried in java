@@ -1,0 +1,115 @@
+1.taking and displaying the user inputs
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	       Scanner sun= new Scanner(System.in);
+	       System.out.println("enter the input for a ");
+	       int a=sun.nextInt();
+	       System.out.println("enter the input for  b");
+	       long b=sun.nextLong();
+	       System.out.println("enter the input for  c");
+           boolean c=sun.nextBoolean();
+           
+	       System.out.println("user input for a is:"+a);
+	       System.out.println("user input for b is:"+b);
+	       System.out.println("user input for c is:"+c);
+	}
+}
+//// output
+//enter the input for a 
+//34
+//enter the input for  b
+//346878
+//enter the input for  c
+//false
+//user input for a is:34
+//user input for b is:346878
+//user input for c is:false
+
+
+
+
+2.converting celcius to farenheit
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	       Scanner sun= new Scanner(System.in);
+	       System.out.println("enter the input for c ");
+	       double c =sun.nextDouble();
+	       double  f =(c*9/5)+32;
+	       System.out.println("the farehheit value  is"+f);
+	}
+}
+// output
+enter the input for c 
+56
+the farehheit value  is132.8
+
+
+
+
+3.// calculating the average of numbers
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	       Scanner sun= new Scanner(System.in);
+	       System.out.println("enter the input for a ");
+	       int a =sun.nextInt();
+           System.out.println("enter the input for b");
+	       int b =sun.nextInt();
+	       System.out.println("enter the input for c");
+	       int c =sun.nextInt();
+	       System.out.println("enter the input for d");
+	       int d =sun.nextInt();
+	       System.out.println("enter the input for e");
+	       int e =sun.nextInt();
+	       double avg=(a+b+c+d+e)/5;
+	       System.out.println("the average of numbers is:"+avg);
+	}
+}
+// output
+enter the input for a 
+2
+enter the input for b
+3
+enter the input for c
+4
+enter the input for d
+5
+enter the input for e
+6
+the average of numbers is:4.0
+
+
+4. trying differnet cases in strings
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	       Scanner sun= new Scanner(System.in);
+           char str1 = sun.next().charAt(0);
+           System.out.println(str1);
+
+          sun.nextLine(); // Clear the buffer so the next line works!
+
+// Second input: This will now correctly catch "bindhu ms gowda"
+           String str2 = sun.nextLine();
+           System.out.println(str2);
+
+// Third input: This will now wait for your actual 3rd input
+           String str3 = sun.next();
+           System.out.println(str3);
+	       
+	}
+}
+
+// output
+bindhu // first input
+b
+bindhu ms gowda // second input
+bindhu ms gowda
+bindhu ms gowda // third input
+bindhu
