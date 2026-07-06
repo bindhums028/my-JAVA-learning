@@ -14,13 +14,13 @@ public class Main
 
 //         int i=1;
 //         while(i<=n) {
-//             System.out.println(i);
+//             System.out.println(i);/// to calculate the sum of numbers from start range to end using both loops
 //             i++;
 //         }
 
 //         for(int i=1;i<=n;i++) {
 // 		    if (i%2 == 0) {
-// 		        System.out.println(i);
+// 		        System.out.println(i);// printing only even numvers from both loops
 // 		    }
 // 		}
 
@@ -36,7 +36,7 @@ public class Main
         
         // int ans = 1;
         // // for(int i=1;i<=n;i++) {
-        // //     ans*=i;
+        // //     ans*=i;/// finding the factorail of numbers from both the loops
         // // }
         
         // int i=1;
