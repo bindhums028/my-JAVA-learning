@@ -1,0 +1,149 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sun=new Scanner(System.in);
+	    for(int i=0;i<5;i++){
+		System.out.println("*****");
+	    }
+	}
+}  
+//// printing 
+*****
+*****
+*****
+*****
+*****
+// to print the below pattren as output
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sun=new Scanner(System.in);
+	    for(int i=0;i<=5;i++){
+	    for(int j=0;j<=i;j++){
+		System.out.print("*");
+	    }
+	    System.out.println();
+	    }
+	}
+}
+// output
+*
+**
+***
+****
+*****
+******
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sun=new Scanner(System.in);
+	    for(int i=1;i<=5;i++){
+	    for(int j=1;j<=i;j++){
+		System.out.print(i);
+	    }
+	    System.out.println();
+	    }
+	}
+}
+// output
+1
+22
+333
+4444
+55555
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 5;
+        
+        for (int i = 1; i <= n; i++) {
+            // Print leading spaces
+            for (int s = 1; s <= (n - i); s++) {
+                System.out.print("  ");
+            }
+            
+            // Print numbers
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+/// output 
+        1 
+      1 2 
+    1 2 3 
+  1 2 3 4 
+1 2 3 4 5 
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 5;
+        
+        for (int i = 1; i <= n; i++) {
+            // Print leading spaces
+            for (int s = 1; s <= (n - i); s++) {
+                System.out.print("  ");
+            }
+            
+            // Print numbers
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*" + " ");
+            }
+            
+            System.out.println();
+        }
+    }
+}
+/// output 
+        * 
+      * * 
+    * * * 
+  * * * * 
+* * * * * 
+public class Main{
+    public static void main(String[] args) {
+        int n = 4;
+
+        // Upper Half
+        for (int i = 1; i <= n; i++) {
+            for (int s = 1; s <= (n - i); s++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("x ");
+            }
+            System.out.println();
+        }
+
+        // Lower Half
+        for (int i = n - 1; i >= 1; i--) {
+            for (int s = 1; s <= (n - i); s++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("x ");
+            }
+            System.out.println();
+        }
+    }
+}
+//// output 
+   x 
+  x x 
+ x x x 
+x x x x 
+ x x x 
+  x x 
+   x 
+
