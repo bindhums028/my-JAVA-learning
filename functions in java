@@ -18,3 +18,127 @@ public class Main
 	}
 }   //// output
 1
+
+
+
+// tp print name using functions
+import java.util.*;
+public class Main
+{
+    public static void name(String x){
+        System.out.print("hello "+ x);
+        }
+	public static void main(String[] args) {
+	    Scanner sun=new Scanner(System.in);
+	    System.out.println("enter your cute name");
+	    String name=sun.nextLine();
+	    name(name);
+	    sun.close();
+	}
+}
+
+
+
+//// to find sum of a single numebr example 5,
+import java.util.*;
+public class Main
+{
+    public static void sum(int x){
+        int sum=0;
+        for(int i=0;i<=x;i++){
+            sum+=i;
+        }
+        System.out.println("sum :" + sum);
+    }
+	public static void main(String[] args) {
+	    Scanner sun=new Scanner(System.in);
+	    System.out.println("enter the numbers");
+	    int num =sun.nextInt();
+	    sum(num);
+	    sun.close();
+	}
+}
+
+
+
+/// to check a number is prime or not
+import java.util.Scanner;
+
+public class Main {
+
+    // Function to check if a number is prime
+    public static boolean isPrime(int n) {
+        // Numbers less than or equal to 1 are not prime
+        if (n <= 1) {
+            return false;
+        }
+
+        // Check divisibility from 2 up to sqrt(n)
+        for (int i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                return false; // Found a factor, so it's not prime
+            }
+        }
+
+        return true; // No factors found, so it's prime
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        if (isPrime(num)) {
+            System.out.println(num + " is a Prime number.");
+        } else {
+            System.out.println(num + " is NOT a Prime number.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+// to reverse the string
+import java.util.Scanner;
+
+public class Main {
+
+    // Function to reverse a string
+    public static String reverse(String str) {
+        return new StringBuilder(str).reverse().toString();
+         }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         String str="hello bindhu ";
+         String reversed=reverse(str);
+         System.out.print(reversed);
+         scanner.close();
+}
+}
+
+
+
+//// to print the factors of a number
+import java.util.Scanner;
+
+public class Main {
+
+    // Function to reverse a string
+    public static void factors(int n){
+        for(int i=1;i<=n;i++){
+            if(n%i==0){
+                System.out.print(i+ " ");
+            }
+        }
+         System.out.println();
+     }
+        public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+         int num=45;
+         factors(num);
+         scanner.close();
+}
+}
