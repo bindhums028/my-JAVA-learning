@@ -1,0 +1,99 @@
+int m = matrix.length;
+        int n = matrix[0].length;
+
+        for(int i=0;i<m;i++) {
+            for(int j=0;j<n;j++) {
+                if (matrix[i][j] == target) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+
+////
+Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+
+We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+
+You must solve this problem without using the library's sort function.
+
+ 
+
+Example 1:
+
+Input: nums = [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+Example 2:
+
+Input: nums = [2,0,1]
+Output: [0,1,2]
+ class Solution {
+    public void sortColors(int[] nums) {
+        int low = 0;
+        int mid = 0;
+        int high = nums.length - 1;
+
+        while (mid <= high) {
+            if (nums[mid] == 0) {
+                // Swap with low pointer and move both forward
+                swap(nums, low, mid);
+                low++;
+                mid++;
+            } else if (nums[mid] == 1) {
+                // 1 is in the correct middle region, just move forward
+                mid++;
+            } else { // nums[mid] == 2
+                // Swap with high pointer and move high backward
+                swap(nums, mid, high);
+                high--;
+                // Note: Do not increment mid here because the newly swapped value at mid needs to be inspected.
+            }
+        }
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
+
+////////////
+Given an array arr[] consisting of only 0's and 1's. Modify the array in-place to segregate 0s onto the left side and 1s onto the right side of the array.
+
+Examples :
+
+Input: arr[] = [0, 1, 0, 1, 0, 0, 1, 1, 1, 0]
+Output: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+Explanation:  After segregation, all the 0's are on the left and 1's are on the right. Modified array will be [0, 0, 0, 0, 0, 1, 1, 1, 1, 1].
+class Solution {
+    void segregate0and1(int[] arr) {
+        int low = 0;
+        int high = arr.length - 1;
+
+        while (low < high) {
+            // Move low forward if element is already 0
+            while (arr[low] == 0 && low < high) {
+                low++;
+            }
+
+            // Move high backward if element is already 1
+            while (arr[high] == 1 && low < high) {
+                high--;
+            }
+
+            // Swap arr[low] and arr[high] using a temp variable
+            if (low < high) {
+                int temp = arr[low];
+                arr[low] = arr[high];
+                arr[high] = temp;
+
+                low++;
+                high--;
+            }
+        }
+    }
+}
