@@ -27,6 +27,15 @@ public class Main
 		        nsp1+=1;
 		        nsp2-=2;
 		    }
+///////////// output
+   *
+  * *
+ *   *
+*     *
+ *   *
+  * *
+   *
+
 		    System.out.println();
 		}
 	}
