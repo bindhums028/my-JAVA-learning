@@ -1,0 +1,28 @@
+public class Main
+{
+    private static void per(String str,String ros){
+        if(str.length()==0){
+         System.out.println(ros);
+         return;
+        }
+        for(int i=0;i<str.length();i++){
+		    char ch=str.charAt(i);
+		    String rest=str.substring(0,i)+str.substring(i+1);
+		    per(rest,ros+ch);
+		}
+    }
+	public static void main(String[] args) {
+	    String abc="ABC";
+	    System.out.println("the arrangements are:");
+		per(abc,"");
+}
+}
+
+/// output
+the arrangements are:
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
